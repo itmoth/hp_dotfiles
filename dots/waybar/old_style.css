@@ -1,0 +1,169 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+
+/* the whole window */
+window#waybar {
+  color: #fff4d2;
+  background: none;
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#cava,
+#backlight,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+  background: #000000;
+  border: 7px solid #000000;
+  border-radius: 8px;
+}
+
+#window,
+#tray,
+#cava,
+#backlight,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  padding-right: 4px;
+}
+
+
+/* ================================ */
+/*       workspaces module          */
+/* ================================ */
+#workspaces {
+  margin: 0px;
+}
+
+#workspaces button {
+  color: #fff4d2;
+  padding: 0 4px;
+  margin: 0px 3px;
+  min-width: 25px;
+}
+
+#workspaces button:hover {
+  background: #d3869b;
+}
+
+#workspaces button.visible {
+  background: #fe8019;
+}
+
+#workspaces button.visible:hover {
+  background: #fe8019;
+}
+
+#workspaces button.active {
+  background: #fe8019;
+}
+
+#workspaces button.active:hover {
+  background: #fe8019;
+}
+
+#workspaces button.urgent {
+  background: #ea6962;
+}
+
+/* ================================ */
+/*            window                 */
+/* ================================ */
+
+#window {
+  color: #fabd2f;
+}
+
+/* ================================ */
+/*            tray                 */
+/* ================================ */
+
+#tray {
+  padding: 0 6px 0 6px;
+}
+
+/* ================================ */
+/*            cava                  */
+/* ================================ */
+#cava {
+  color: #b8bb26;
+}
+
+/* ================================ */
+/*            backlight             */
+/* ================================ */
+#backlight {
+  color: #83a598;
+}
+
+/* ================================ */
+/*            memory                */
+/* ================================ */
+
+/* ================================ */
+/*         pulseaudio               */
+/* ================================ */
+#pulseaudio {
+  color: #d3869b;
+}
+
+#pulseaudio.muted {
+  color: #ea6962;
+}
+
+/* ================================ */
+/*            battery               */
+/* ================================ */
+#battery {
+  color: #689d6a;
+}
+
+#battery.critical {
+  color: #cc241d;
+}
+
+#battery.warning {
+  color: #e78a4e;
+}
+/* ================================ */
+/*            clock                 */
+/* ================================ */
+#clock {
+  color: #8ec07c;
+}

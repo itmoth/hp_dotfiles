@@ -1,0 +1,112 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"hyprland/mode",
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+	"modules-right": [
+		"cava",
+		"pulseaudio",
+		"battery",
+		"clock#date",
+		"clock#time"
+	],
+
+	// Modules
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "active-only": false,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span > 一 </span>",
+      "2": "<span > 二 </span>",
+      "3": "<span > 三 </span>",
+      "4": "<span > 四 </span>",
+      "5": "<span > 五 </span>",
+      "6": "<span > 六 </span>",
+      "7": "<span > 七 </span>",
+      "8": "<span > 八 </span>",
+      "9": "<span > 九 </span>",
+	  "10": "<span > 十 </span>",
+    }
+  },
+
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"clock#time": {
+		"interval": 1,
+		"format": "{:%I:%M:%S}",
+		"tooltip": false
+	},
+
+	"clock#date": {
+		"interval": 20,
+		"format": "{:%e %b %Y}",
+		"tooltip": false
+		//"tooltip-format": "{:%e %B %Y}"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"tooltip": false
+	},
+
+  "cava": {
+    "framerate": 30,
+    "autosens": 1,
+    "bars": 14,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "bar_delimiter": 0,
+    "noise_reduction": 0.77,
+    "input_delay": 2,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+  },
+
+}
+
+// vi:ft=jsonc

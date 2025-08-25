@@ -1,0 +1,168 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		/*color: @white;*/
+		background-color: @critical;
+	}
+}
+
+
+/* Styles */
+
+/* Colors (gruvbox) */
+@define-color black	#5B5156;
+@define-color red	#1B3551;
+@define-color green	#3F356D;
+@define-color yellow	#753D66;
+@define-color blue	#8C509E;
+@define-color purple	#AA4F72;
+@define-color aqua	#B5809E;
+@define-color gray	#F0CDE0;
+@define-color brgray	#A88F9D;
+@define-color brred	#24466C;
+@define-color brgreen	#544791;
+@define-color bryellow	#9C5288;
+@define-color brblue	#BB6AD2;
+@define-color brpurple	#E36A98;
+@define-color braqua	#F1ABD2;
+@define-color white	#F0CDE0;
+@define-color bg2	#5B5156;
+
+
+@define-color warning 	@bryellow;
+@define-color critical	@red;
+@define-color mode	@black;
+@define-color unfocused	@bg2;
+@define-color focused	@braqua;
+@define-color inactive	@purple;
+@define-color sound	@brpurple;
+@define-color network	@purple;
+@define-color memory	@braqua;
+@define-color cpu	@green;
+@define-color temp	@brgreen;
+@define-color layout	@bryellow;
+@define-color battery	@redz;
+@define-color date	@black;
+@define-color time	@white;
+
+/* Reset all styles */
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-shadow: none;
+	icon-shadow: none;
+}
+
+/* The whole bar */
+#waybar {
+	background: #362C31; /* #282828e0 */
+	color: @white;
+	font-family: Iosevka;
+	font-size: 13.5pt;
+	/*font-weight: bold;*/
+}
+
+/* Each module */
+#battery,
+#clock,
+#mode,
+#pulseaudio,
+#mpris {
+	padding-left: 8pt;
+	padding-right: 8pt;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 1s;
+}
+
+/* Each warning */
+#battery.warning.discharging {
+	color: @warning;
+}
+
+/* And now modules themselves in their respective order */
+
+/* Current sway mode (resize etc) */
+#mode {
+	color: @white;
+	background: @mode;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+	/*font-weight: bold;*/
+	padding-left: 2pt;
+	padding-right: 2pt;
+	color: @white;
+	background: @unfocused;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible {
+	color: @white;
+	background: @inactive;
+}
+
+/* Active (on focused output) */
+#workspaces button.focused {
+	color: @black;
+	background: @focused;
+}
+
+/* Contains an urgent window */
+#workspaces button.urgent {
+	color: @black;
+	background: @warning;
+}
+
+/* Style when cursor is on the button */
+#workspaces button:hover {
+	background: @white;
+	color: @black;
+}
+
+#window {
+	margin-right: 35pt;
+	margin-left: 35pt;
+}
+
+#cava {
+	background: @brgray;
+	color: @bryellow;
+}
+
+#pulseaudio {
+	background: @brblue;
+	color: @black;
+}
+
+#battery {
+	background: @red;
+	color: @foreground;
+}
+
+#clock.date {
+	background: @date;
+	color: #FAE2EF;
+}
+
+#clock.time {
+	background: @time;
+	color: @black;
+}
+
