@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : tim
+ * Github : @itmoth
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #362C31;
+    background-alt: #5B5156;
+    foreground:     #FAE2EF;
+    selected:       #544791;
+    active:         #BB6AD2;
+    urgent:         #9C5288;
+}
