@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : tim
+ * Github : @itmoth
+ * 
+ * Colors
+ **/
+
+* {
+    background:     {{ background }};
+    background-alt: {{ color0 }};
+    foreground:     {{ foreground }};
+    selected:       {{ color10 }};
+    active:         {{ color12 }};
+    urgent:         {{ color11 }};
+}
