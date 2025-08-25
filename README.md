@@ -21,7 +21,7 @@ dotfiles for my hp envy
 - rofi
 - comfy spicetify
 - sioyek
-- vscode
-- firefox with pywal
+- vscode [https://github.com/saatvik333/vscode-wallust-theme](https://github.com/saatvik333/vscode-wallust-theme)
+- firefox with pywalfox
 
 font: Iosevka
