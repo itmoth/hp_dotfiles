@@ -23,3 +23,5 @@ dotfiles for my hp envy
 - sioyek
 - vscode
 - firefox with pywal
+
+font: Iosevka
